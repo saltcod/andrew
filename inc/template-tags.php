@@ -19,7 +19,8 @@ function waterstreet_content_nav( $nav_id ) {
 
 	// Don't print empty markup on single pages if there's nowhere to navigate.
 	if ( is_single() ) {
-		$previous = ( is_attachment() ) ? get_post( $post->post_parent ) : get_adjacent_post( false, '', true );
+		$previous = ( is_attachment() ) ? get_post( $post->post_parent ) : get_adjacent_post( 
+false, '', true );
 		$next = get_adjacent_post( false, '', false );
 
 		if ( ! $next && ! $previous )
@@ -40,17 +41,22 @@ function waterstreet_content_nav( $nav_id ) {
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 
-		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'waterstreet' ) . '</span> %title' ); ?>
-		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'waterstreet' ) . '</span>' ); ?>
+		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span 
+class="meta-nav">' . _x( '&rarr;', 'Next post link', 'waterstreet' ) . '</span>' ); ?>
+		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span 
+class="meta-nav">' . _x( '&larr;', 'Previous post link', 'waterstreet' ) . '</span> %title' ); ?>
 
-	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
+	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : 
+// navigation links for home, archive, and search pages ?>
 
 		<?php if ( get_next_posts_link() ) : ?>
-		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'waterstreet' ) ); ?></div>
+		<div class="nav-previous"><?php next_posts_link( __( '<span 
+class="meta-nav">&larr;</span> Older posts', 'waterstreet' ) ); ?></div>
 		<?php endif; ?>
 
 		<?php if ( get_previous_posts_link() ) : ?>
-		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'waterstreet' ) ); ?></div>
+		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span 
+class="meta-nav">&rarr;</span>', 'waterstreet' ) ); ?></div>
 		<?php endif; ?>
 
 	<?php endif; ?>
@@ -75,7 +81,8 @@ function waterstreet_comment( $comment, $args, $depth ) {
 		case 'trackback' :
 	?>
 	<li class="post pingback">
-		<p><?php _e( 'Pingback:', 'waterstreet' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'waterstreet' ), ' ' ); ?></p>
+		<p><?php _e( 'Pingback:', 'waterstreet' ); ?> <?php comment_author_link(); ?><?php 
+edit_comment_link( __( '(Edit)', 'waterstreet' ), ' ' ); ?></p>
 	<?php
 			break;
 		default :
@@ -85,18 +92,22 @@ function waterstreet_comment( $comment, $args, $depth ) {
 			<footer>
 				<div class="comment-author vcard">
 					<?php echo get_avatar( $comment, 40 ); ?>
-					<?php printf( __( '%s <span class="says">says:</span>', 'waterstreet' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+					<?php printf( __( '%s <span class="says">says:</span>', 
+'waterstreet' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 				</div><!-- .comment-author .vcard -->
 				<?php if ( $comment->comment_approved == '0' ) : ?>
-					<em><?php _e( 'Your comment is awaiting moderation.', 'waterstreet' ); ?></em>
+					<em><?php _e( 'Your comment is awaiting moderation.', 
+'waterstreet' ); ?></em>
 					<br />
 				<?php endif; ?>
 
 				<div class="comment-meta commentmetadata">
-					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><time pubdate datetime="<?php comment_time( 'c' ); ?>">
+					<a href="<?php echo esc_url( get_comment_link( 
+$comment->comment_ID ) ); ?>"><time pubdate datetime="<?php comment_time( 'c' ); ?>">
 					<?php
 						/* translators: 1: date, 2: time */
-						printf( __( '%1$s at %2$s', 'waterstreet' ), get_comment_date(), get_comment_time() ); ?>
+						printf( __( '%1$s at %2$s', 'waterstreet' ), 
+get_comment_date(), get_comment_time() ); ?>
 					</time></a>
 					<?php edit_comment_link( __( '(Edit)', 'waterstreet' ), ' ' );
 					?>
@@ -106,7 +117,8 @@ function waterstreet_comment( $comment, $args, $depth ) {
 			<div class="comment-content"><?php comment_text(); ?></div>
 
 			<div class="reply">
-				<?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+				<?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 
+'max_depth' => $args['max_depth'] ) ) ); ?>
 			</div><!-- .reply -->
 		</article><!-- #comment-## -->
 
@@ -123,7 +135,9 @@ if ( ! function_exists( 'waterstreet_posted_on' ) ) :
  * @since waterstreet 1.0
  */
 function waterstreet_posted_on() {
-	printf( __( 'Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'waterstreet' ),
+	printf( __( 'Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" 
+datetime="%3$s" pubdate>%4$s</time></a><span class="byline"> by <span class="author vcard"><a class="url 
+fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'waterstreet' ),
 		esc_url( get_permalink() ),
 		esc_attr( get_the_time() ),
 		esc_attr( get_the_date( 'c' ) ),

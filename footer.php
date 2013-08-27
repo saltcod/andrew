@@ -9,9 +9,10 @@
  */
 ?>
 
+	   </div><!-- #page .hfeed .site -->
+
 	</div><!-- #main .site-main -->
 
-</div><!-- #page .hfeed .site -->
 
 <?php wp_footer(); ?>
 
