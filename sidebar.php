@@ -24,10 +24,16 @@
 	  
 	 	 <img src="<?php echo get_template_directory_uri();?>/assets/nav-dots.png">
 
-	  <a class="buy" href="/buy"></a>
-	  
-	  <a class="email" href="/contact"></a>
 
-  </div>
+	  	<?php /* Print out the next/prev on single pages only */ 
+	  		if (is_single() ) { waterstreet_content_nav( 'nav-above' );}   ?>	  
 	  
+  </div>
+
+	  <div id="side-footer">
+		<a class="buy" href="/buy"></a>
+			<div id="spacer"></div>
+		<a class="email-link" href="/contact"></a>
+	  </div>
+ 
 </div>

@@ -19,13 +19,47 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 			<div class="post-thumbnail"> 
-			<a href="<?php the_permalink();?>"><?php the_post_thumbnail(); ?></a></div>
+				<a href="<?php the_permalink();?>">
+				
+					<?php 
+					if (class_exists('MultiPostThumbnails')) {
+
+                // Set Thumbnail
+						$thumb = MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'secondary-image');
+						$has_thumb = MultiPostThumbnails::has_post_thumbnail(get_post_type(), 'secondary-image', strval(get_the_ID()));
+
+                // Thumbnail exist? Else show Not Found
+						if ($has_thumb) : echo $thumb; else : the_post_thumbnail(); endif;
+
+                // Plugin not found.
+					} else {
+
+						echo "MultiPostThumbnails Not Found.";
+
+					}
+					?>
+				
+				</a>
+			</div>
 
 
-	<?php endwhile; ?>
 
-	
-<?php else : ?>
+ 
+
+
+				</a>
+			 
+
+
+
+
+
+
+
+		<?php endwhile; ?>
+
+
+	<?php else : ?>
 
 	<?php get_template_part( 'no-results', 'archive' ); ?>
 
@@ -33,5 +67,4 @@ get_header(); ?>
 </div>
 </div><!-- #content .site-content -->
 </section><!-- #primary .content-area -->
- <?php get_footer(); ?>
- 
+<?php get_footer(); ?>
