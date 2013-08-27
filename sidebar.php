@@ -16,7 +16,7 @@
 
   <div id="side-links">
 
-	  <a class="about" href="/about"></a>	
+	  <a class="about" href="<?php echo site_url(); ?>/about"></a>	
 
 	  	 <img src="<?php echo get_template_directory_uri();?>/assets/nav-dots.png">
 
@@ -31,7 +31,7 @@
   </div>
 
 	  <div id="side-footer">
-		<a class="buy" href="/buy"></a>
+		<a class="buy" href="<?php echo get_site_url(); ?>/buy"></a>
 			<div id="spacer"></div>
 		<a class="email-link" href="/contact"></a>
 	  </div>

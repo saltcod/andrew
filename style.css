@@ -256,7 +256,10 @@ li.menu-item-961 a:hover, li.menu-item-961.current-menu-item a { background: url
 
 
 
+/* =About page
+----------------------------------------------- */
 
+.page-about #primary { max-width: 700px;}
 
 /* =Content
 ----------------------------------------------- */
@@ -380,6 +383,42 @@ margin: 0px;
   transition: transform 0.4s;
 }
 
+
+/* =Asides
+----------------------------------------------- */
+
+.products .group {
+    margin-bottom: 50px;
+}
+
+.page-buy img.page-title {
+    float: left;
+    margin-bottom: 50px;
+}
+.products .group img {
+  float: left;
+  
+}
+.products .group img.clear-right {
+  clear: right;
+
+}
+.products .group img.first-image {
+  margin-right: 25px;
+
+}
+
+.products .buy-description {
+    float: left;
+    font-size: 12px;
+}
+.products .buy-description h2{
+    font: bold 18px/28px helvetica;
+}
+
+.products .buy-description a{
+    color: black;
+}
 
 /* =Asides
 ----------------------------------------------- */
