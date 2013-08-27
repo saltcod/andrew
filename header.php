@@ -39,6 +39,18 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 
+<?php if (! is_page('mobile')): ?>
+
+<script type="text/javascript">
+<!--
+if (screen.width <= 699) {
+document.location = "http://andrewdraws.waterstreetgm.org/mobile/";
+}
+//-->
+</script>
+
+<?php endif; ?>
+
 <?php wp_head(); ?>
 </head>
 

@@ -1,4 +1,3 @@
-
 @import url('inc/css/normalize.css');
 
 @import "inc/css/font-awesome.css";
@@ -301,8 +300,31 @@ li.menu-item-961 a:hover, li.menu-item-961.current-menu-item a { background: url
   -ms-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
+}
 
-  
+
+/* =Mobile Page
+----------------------------------------------- */
+
+.page-mobile #side-links, .page-mobile #side-footer, .page-mobile #footer { display: none; }
+
+.page-mobile #secondary 
+{
+margin: 0 auto;
+width: 300px;
+background: none;
+position: relative;
+text-align: center;
+margin-top: 20px;
+height: 340px;
+border-bottom: solid;
+float: left;
+}
+
+.page-mobile #primary
+{
+width: 300px;
+margin: 0px;
 }
 
 
