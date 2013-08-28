@@ -129,7 +129,7 @@ header#masthead {
   z-index: 100;
 }
 #side-links {
-  margin-top: -145px;
+  margin-top: -165px;
   float: left;
   width: 100%;
   height: 100%;
@@ -185,7 +185,7 @@ header#masthead {
 
 a.about {
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 0;
   background: url(assets/about.png) no-repeat 75px;
   padding: 33px 0px 0px;
 }
@@ -212,8 +212,8 @@ a.buy {
 }
 
 .logged-in #spacer {
-    margin: 29px 0;
- }
+  margin: 29px 0;
+}
 
 a.email-link {
   display: block;
@@ -238,28 +238,52 @@ ul#categories {
   height: 31px;
 }
 
-#menu-categories li { margin: 20px 0px 0px; }
+#menu-categories li { margin: 10px 0px 0px; }
 
-#menu-categories a { color: transparent; padding: 15px 45px 0px; }
+#menu-categories a { 
+  color: transparent; 
+  padding: 15px 45px 0px; 
+}
 
-li.menu-item-965 a { background: url(assets/penandink.png) top center no-repeat; }
-li.menu-item-965 a:hover, li.menu-item-965.current-menu-item a { background: url(assets/penandink-active.png) 19px 0px no-repeat; }
+li.menu-item-965 a {
+  background: url(assets/penandink.png) top center no-repeat; 
+}
+li.menu-item-965 a:hover,
+li.menu-item-965.current-menu-item a {
+  background: url(assets/penandink-active.png) 20px 0px no-repeat; 
+}
 
-li.menu-item-962 a { background: url(assets/paintings.png) top center no-repeat; }
-li.menu-item-962 a:hover, li.menu-item-962.current-menu-item a { background: url(assets/paintings-active.png) 7px 0px no-repeat; }
+li.menu-item-962 a {
+  background: url(assets/paintings.png) top center no-repeat; 
+}
+li.menu-item-962 a:hover,
+li.menu-item-962.current-menu-item a {
+  background: url(assets/paintings-active.png) 8px 0px no-repeat; 
+}
 
-li.menu-item-959 a { background: url(assets/portraits.png) top center no-repeat; }
-li.menu-item-959 a:hover, li.menu-item-959.current-menu-item a { background: url(assets/portraits-active.png) 18px 1px no-repeat; }
+li.menu-item-959 a {
+  background: url(assets/portraits.png) top center no-repeat; 
+}
+li.menu-item-959 a:hover,
+li.menu-item-959.current-menu-item a {
+  background: url(assets/portraits-active.png) 18px 1px no-repeat; 
+}
 
-li.menu-item-961 a { background: url(assets/spots.png) top center no-repeat; }
-li.menu-item-961 a:hover, li.menu-item-961.current-menu-item a { background: url(assets/spots-active.png) 6px 0px no-repeat; }
+li.menu-item-961 a {
+  background: url(assets/spots.png) top center no-repeat; 
+}
+li.menu-item-961 a:hover,
+li.menu-item-961.current-menu-item a {
+  background: url(assets/spots-active.png) 6px 0px no-repeat; 
+}
 
 
 
 /* =About page
 ----------------------------------------------- */
 
-.page-about #primary { max-width: 700px;}
+.page-about #primary { max-width: 700px;
+}
 
 /* =Content
 ----------------------------------------------- */
@@ -313,21 +337,21 @@ li.menu-item-961 a:hover, li.menu-item-961.current-menu-item a { background: url
 
 .page-mobile #secondary 
 {
-margin: 0 auto;
-width: 300px;
-background: none;
-position: relative;
-text-align: center;
-margin-top: 20px;
-height: 340px;
-border-bottom: solid;
-float: left;
+  margin: 0 auto;
+  width: 300px;
+  background: none;
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+  height: 340px;
+  border-bottom: solid;
+  float: left;
 }
 
 .page-mobile #primary
 {
-width: 300px;
-margin: 0px;
+  width: 300px;
+  margin: 0px;
 }
 
 
@@ -350,7 +374,7 @@ margin: 0px;
   -webkit-perspective: 1000;
   -webkit-backface-visibility: hidden;   
 }
- 
+
 
 .image-post-title {
   font-size: 10px;
@@ -388,12 +412,12 @@ margin: 0px;
 ----------------------------------------------- */
 
 .products .group {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .page-buy img.page-title {
-    float: left;
-    margin-bottom: 50px;
+  float: left;
+  margin-bottom: 50px;
 }
 .products .group img {
   float: left;
@@ -409,15 +433,15 @@ margin: 0px;
 }
 
 .products .buy-description {
-    float: left;
-    font-size: 12px;
+  float: left;
+  font-size: 12px;
 }
 .products .buy-description h2{
-    font: bold 18px/28px helvetica;
+  font: bold 18px/28px helvetica;
 }
 
 .products .buy-description a{
-    color: black;
+  color: black;
 }
 
 /* =Asides
@@ -545,11 +569,6 @@ h1.entry-title {
 
 .nav-previous a,
 .nav-next a{
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.4s ease;
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -577,7 +596,7 @@ h1.entry-title {
 }
 
 .no-previous {
-    margin-left: 85px;
+  margin-left: 85px;
 }
 
 
@@ -890,4 +909,4 @@ query for retina AND a certain size if you want. Go Nuts.
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   body {
   }
- }
+}
