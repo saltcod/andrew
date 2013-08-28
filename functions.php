@@ -140,6 +140,17 @@ add_action('wp_footer', 'waterstreet_show_template');
 
 
 /**
+ * Add new media size for front page grid tiles
+ *
+ */
+
+add_image_size( 'frontpage-grid-tile', 188, 9999 );
+
+
+
+
+
+/**
  * Add slug to menu li classes
  *
  * @since 0.1
