@@ -335,8 +335,7 @@ li.menu-item-961.current-menu-item a {
 
 .page-mobile #side-links, .page-mobile #side-footer, .page-mobile #footer { display: none; }
 
-.page-mobile #secondary 
-{
+.page-mobile #secondary {
   margin: 0 auto;
   width: 300px;
   background: none;
@@ -348,8 +347,7 @@ li.menu-item-961.current-menu-item a {
   float: left;
 }
 
-.page-mobile #primary
-{
+.page-mobile #primary{
   width: 300px;
   margin: 0px;
 }
@@ -360,7 +358,7 @@ li.menu-item-961.current-menu-item a {
 
 .home .post-thumbnail { 
   overflow: hidden; 
-  margin: 0;
+  margin: 5px 0;
   position: relative;
 
 }
