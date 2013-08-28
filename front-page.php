@@ -51,11 +51,11 @@ get_header(); ?>
 					if (class_exists('MultiPostThumbnails')) {
 
                 // Set Thumbnail
-						$thumb = MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'frontpage-grid-tile');
-						$has_thumb = MultiPostThumbnails::has_post_thumbnail(get_post_type(), 'frontpage-grid-tile', strval(get_the_ID()));
+						$thumb = MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'secondary-image', null, 'frontpage-grid-tile');
+						$has_thumb = MultiPostThumbnails::has_post_thumbnail(get_post_type(), 'secondary-image', strval(get_the_ID()));
                 // Thumbnail exist? Else show Not Found
-						if ($has_thumb) : echo $thumb; else : the_post_thumbnail('frontpage-grid-tile'); endif;
-						 
+						if ($has_thumb) : echo $thumb; else : the_post_thumbnail(); endif;
+
 
 
                 // Plugin not found.

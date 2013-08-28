@@ -54,7 +54,7 @@ if (class_exists('MultiPostThumbnails')) {
 		'id' => 'secondary-image',
 		'post_type' => 'post'
 		) );
-
+ 
 }
 
 
@@ -147,8 +147,7 @@ add_action('wp_footer', 'waterstreet_show_template');
 add_image_size( 'frontpage-grid-tile', 188, 9999 );
 
 
-
-
+ 
 
 /**
  * Add slug to menu li classes

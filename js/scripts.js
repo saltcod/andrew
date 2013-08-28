@@ -27,7 +27,8 @@ jQuery(function($) {
 				itemSelector : '.post-thumbnail',
 				transformsEnabled: false,
 				masonry: {
-					gutterWidth: 30
+					columnWidth: 50,
+					gutterWidth: 10
 				}
 			});
 		});
