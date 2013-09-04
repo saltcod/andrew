@@ -68,7 +68,7 @@ get_header(); ?>
 
 
 				</a> 
-				<?php /* <div class="image-post-title"><?php echo get_the_title();?></div>	*/?>
+				 <div class="image-post-title"><?php echo get_the_title();?></div>	 
 				 
 			</div>
 
