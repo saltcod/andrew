@@ -7,6 +7,12 @@ Template Name: ABOUT
 ?>
 
 
+
+
+
+
+
+
 <?php get_header(); ?>
 
 
